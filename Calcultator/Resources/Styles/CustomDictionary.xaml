@@ -46,4 +46,46 @@
 
     </Style>
 
+    <Style TargetType="BoxView">
+
+        <Setter
+            Property="Color"
+            Value="{AppThemeBinding Light={StaticResource LightPrimary}, Dark={StaticResource DarkPrimary}}"
+            />
+
+        <Setter Property="CornerRadius" Value="30, 30, 0, 0" />
+
+    </Style>
+
+    <Style x:Key="BaseButton" TargetType="Button">
+
+        <Setter
+            Property="BackgroundColor"
+            Value="{AppThemeBinding Light={StaticResource DarkSecondary}, Dark={StaticResource LightSecondary}}"
+            />
+
+        <Setter Property="FontFamily" Value="ConcertOne" />
+        <Setter Property="FontSize" Value="25" />
+
+        <Setter
+            Property="TextColor"
+            Value="{AppThemeBinding Light={StaticResource LightSecondary}, Dark={StaticResource DarkSecondary}}"
+            />
+
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource BaseButton}" />
+
+    <Style Class="YellowButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
+
+        <Setter Property="TextColor" Value="{StaticResource YellowColor}" />
+
+    </Style>
+
+    <Style Class="RedButton" BasedOn="{StaticResource BaseButton}" TargetType="Button">
+
+        <Setter Property="TextColor" Value="{StaticResource RedColor}" />
+
+    </Style>
+
 </ResourceDictionary>
