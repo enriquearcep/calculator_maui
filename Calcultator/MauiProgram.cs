@@ -13,6 +13,7 @@ namespace Calcultator
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("ConcertOne.ttf", "ConcertOne");
                 });
 
 #if DEBUG
