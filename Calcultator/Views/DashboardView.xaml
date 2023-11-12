@@ -12,12 +12,12 @@
 
             <Label
                 StyleClass="LabelText, LabelOperation"
-                Text="5 * 5"
+                Text="{Binding Formula}"
                 />
 
             <Label
                 StyleClass="LabelText, LabelResult"
-                Text="25"
+                Text="{Binding Result}"
                 />
 
         </VerticalStackLayout>
@@ -35,37 +35,37 @@
                 >
 
                 <!--#region Row 1 -->
-                <Button StyleClass="YellowButton" Text="AC" />
-                <Button Grid.Column="1" StyleClass="YellowButton" Text="⌫" />
-                <Button Grid.Column="2" StyleClass="YellowButton" Text="%" />
-                <Button Grid.Column="3" StyleClass="RedButton" Text="/" />
+                <Button Command="{Binding ClearCommand}" StyleClass="YellowButton" Text="AC" />
+                <Button Command="{Binding BackSpaceCommand}" Grid.Column="1" StyleClass="YellowButton" Text="⌫" />
+                <Button Command="{Binding OperationCommand}" CommandParameter=" % " Grid.Column="2" StyleClass="YellowButton" Text="%" />
+                <Button Command="{Binding OperationCommand}" CommandParameter=" / " Grid.Column="3" StyleClass="RedButton" Text="/" />
                 <!--#endregion-->
 
                 <!--#region Row 2 -->
-                <Button Grid.Row="1" Text="7" />
-                <Button Grid.Row="1" Grid.Column="1" Text="8" />
-                <Button Grid.Row="1" Grid.Column="2" Text="9" />
-                <Button Grid.Row="1" Grid.Column="3" StyleClass="RedButton" Text="*" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="7" Grid.Row="1" Text="7" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="8" Grid.Row="1" Grid.Column="1" Text="8" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="9" Grid.Row="1" Grid.Column="2" Text="9" />
+                <Button Command="{Binding OperationCommand}" CommandParameter=" * " Grid.Row="1" Grid.Column="3" StyleClass="RedButton" Text="*" />
                 <!--#endregion-->
 
                 <!--#region Row 3 -->
-                <Button Grid.Row="2" Text="4" />
-                <Button Grid.Row="2" Grid.Column="1" Text="5" />
-                <Button Grid.Row="2" Grid.Column="2" Text="6" />
-                <Button Grid.Row="2" Grid.Column="3" StyleClass="RedButton" Text="-" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="4" Grid.Row="2" Text="4" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="5" Grid.Row="2" Grid.Column="1" Text="5" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="6" Grid.Row="2" Grid.Column="2" Text="6" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="-" Grid.Row="2" Grid.Column="3" StyleClass="RedButton" Text="-" />
                 <!--#endregion-->
 
                 <!--#region Row 4 -->
-                <Button Grid.Row="3" Text="1" />
-                <Button Grid.Row="3" Grid.Column="1" Text="2" />
-                <Button Grid.Row="3" Grid.Column="2" Text="3" />
-                <Button Grid.Row="3" Grid.Column="3" StyleClass="RedButton" Text="+" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="1" Grid.Row="3" Text="1" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="2" Grid.Row="3" Grid.Column="1" Text="2" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="3" Grid.Row="3" Grid.Column="2" Text="3" />
+                <Button Command="{Binding OperationCommand}" CommandParameter=" + " Grid.Row="3" Grid.Column="3" StyleClass="RedButton" Text="+" />
                 <!--#endregion-->
 
                 <!--#region Row 5 -->
-                <Button Grid.ColumnSpan="2" Grid.Row="4" Text="0" />
-                <Button Grid.Row="4" Grid.Column="2" Text="." />
-                <Button Grid.Row="4" Grid.Column="3" StyleClass="RedButton" Text="=" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="0" Grid.ColumnSpan="2" Grid.Row="4" Text="0" />
+                <Button Command="{Binding OperationCommand}" CommandParameter="." Grid.Row="4" Grid.Column="2" Text="." />
+                <Button Command="{Binding CalculateCommand}" Grid.Row="4" Grid.Column="3" StyleClass="RedButton" Text="=" />
                 <!--#endregion-->
 
             </Grid>

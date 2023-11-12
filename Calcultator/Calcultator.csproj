@@ -53,6 +53,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Dangl.Calculator" Version="2.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
