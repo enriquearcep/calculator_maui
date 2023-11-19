@@ -79,9 +79,11 @@ namespace Calcultator.ViewModels
         }
         #endregion
 
+        #region Methods
         private void UpdateOperation(string number)
         {
             Formula += number;
         }
+        #endregion
     }
 }
